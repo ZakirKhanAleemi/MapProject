@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link rel = "stylesheet" type = "text/css" href = "/style.css" />
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</script>
+<style>
+        #myMap {
+            height:400px;
+            width:100%;
+
+           container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            container > div {
+                background-color: springgreen;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+
+}</style>
+<title>Map App</title>
+</head>
+<body>
+
+  <div class="container" >
+  <img src="logo.svg" width="100%" height ="140px">
+  </div>
+
+  <div id="myMap"></div>
+</div>
+</div>
+  
+
+
+
+
+<div class="container">
+  <h2>Input</h2>
+</div><h3>Select School of your Choice</h3>
+<select>
+        <option value="volvo">AL-Karam Campus</option>
+        <option value="saab">IIL-Campus</option>
+        <option value="mercedes">Qaid-abad Campus</option>
+        <option value="audi">Qayyyum-Abad Campus</option>
+</select> 
+</div>
+
+<h3> Add Details</h3>
+<form>
+Add Radius manually : Radius
+<input name="name" type="text" placeholder="Radius">
+km OR<input name="name" type="number" placeholder="KM"></br>
+Search by location<input name="name" type="text" placeholder="Enter Location">
+
+</form>
+
+<div class="container">
+            <button type="button" class="btn btn-primary">Find Population</button>
+            <button type="button" class="btn btn-success">Find House Count</button>
+            <button type="button" class="btn btn-danger">Reset Map</button>
+        </div>  
+        
+<div class="container">
+  <h2>Output</h2>
+  <div type="button" class="btn btn-primary">Population <input name="name" type="text" placeholder="Population"> </div></br>
+  <div type="button" class="btn btn-success">House Count <input name="name" type="text" placeholder="House Count"></div>
+  <div class="container">
+        <button type="button" class="btn btn-success">Export Data</button>
+      </div>
+
+</div>
+</body>
+<div class="container">
+<script type="text/javascript">
+var map = L.map('myMap', {
+center: [50.8120599, 4.3800681],
+zoom:
+17
+});
+L.tileLayer(
+'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+{ maxZoom: 19, detectRetina: true }
+).addTo(map);
+</script>
+</div>
+</html>
